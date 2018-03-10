@@ -12,5 +12,5 @@
 */
 
 Route::get('/', 'IndexController@index');
-
 Route::get('/page', 'IndexController@page');
+Route::get('/articles', 'IndexController@articles');
