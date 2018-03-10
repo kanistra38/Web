@@ -86,8 +86,9 @@
 <body>
 
     <div class="links">
-        <a style="color: white" href="/">Articles</a>
         <a style="color: white" href="/page">First Page</a>
+        <a style="color: white" href="/">Articles</a>
+        <a style="color: white" href="/page/add">Add Articles</a>
         <a style="color: white" href="https://github.com/kost3/web">GitHub</a>
     </div>
 
