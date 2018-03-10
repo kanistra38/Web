@@ -76,9 +76,30 @@
             text-decoration: none;
         }
 
+        .links {
+            display: block;
+            margin: 0 0 20px 0;
+        }
+
     </style>
 </head>
 <body>
+
+    <div class="links">
+        <a style="color: white" href="/">Articles</a>
+        <a style="color: white" href="/page">First Page</a>
+        <a style="color: white" href="https://github.com/kost3/web">GitHub</a>
+    </div>
+
+    @if(count($errors) > 0)
+        <div class="alert alert-danger">
+           <ul>
+               @foreach($errors->all() as $error)
+                   <li>{{ $error }}</li>
+               @endforeach
+           </ul>
+        </div>
+    @endif
 
     @yield('content')
 

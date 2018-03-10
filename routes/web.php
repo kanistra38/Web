@@ -13,4 +13,6 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/page', 'IndexController@page');
-Route::get('/articles', 'IndexController@articles');
+Route::get('/articles/{id}', 'IndexController@show')->name('articleShow');
+Route::get('/page/add', 'IndexController@add');
+Route::post('/page/add', 'IndexController@store')->name('articleStore');
