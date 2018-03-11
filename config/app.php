@@ -160,6 +160,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        BeatSwitch\Lock\Integrations\Laravel\LockServiceProvider::class,
+
     ],
 
     /*
@@ -208,6 +210,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Lock' => BeatSwitch\Lock\Integrations\Laravel\Facades\Lock::class,
+        'LockManager' => BeatSwitch\Lock\Integrations\Laravel\Facades\LockManager::class,
 
     ],
 

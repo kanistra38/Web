@@ -14,13 +14,19 @@
 Route::get('/', 'IndexController@index');
 Route::get('/page', 'IndexController@page');
 Route::get('/articles/{id}', 'IndexController@show')->name('articleShow');
-Route::get('/page/add', 'IndexController@add');
+Route::get('/page/add', [
+    'uses' => 'IndexController@add',
+    'middleware' => 'roles',
+    'roles' => ['Admin', 'Author']
+]);
 Route::post('/page/add', 'IndexController@store')->name('articleStore');
 Route::delete('/page/delete/{article}', function (\App\Article $article) {
     $article->delete();
 
     return redirect('/');
 })->name('articleDelete');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

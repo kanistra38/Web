@@ -4,6 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="card-body">
+                <p>Test login:</p>
+                <ul>admin@web.loc : Admin</ul>
+                <ul>author@web.loc : Author</ul>
+                <ul>visitor@web.loc : Visitor</ul>
+            </div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
