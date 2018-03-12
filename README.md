@@ -1,13 +1,19 @@
-<h1><a id="Install_Laravel_0"></a>Install Laravel</h1>
-<p>First, I downloaded the Laravel installer with Composer:</p>
-<pre><code class="language-sh">composer global require <span class="hljs-string">"laravel/installer"</span>
-</code></pre>
-<p>Then I created the project with composer:</p>
-<pre><code class="language-sh">composer create-project --prefer-dist laravel/laravel web
-</code></pre>
-<h1><a id="Setting_11"></a>Setting</h1>
-<p>After installation, Laravel pointed to the public directory as the root directory of the web server.<br>
-Then I created an encryption key:</p>
-<pre><code class="language-sh">php artisan key:generate
-</code></pre>
-<p>And configured the .env file</p>
+# Install
+### Requirements
+* [OSpanel or another web server](https://ospanel.io/)
+* [Laravel](https://laravel.com/)
+
+
+### Installing the project
+1) Download the project
+   ```sh
+   $ git clone https://github.com/kost3/Web.git .
+   ```
+2) Extract all files to the folder with your project
+3) Import dump web.sql into your database
+4) Update composer 
+   ```sh
+   $ composer update
+   ```
+5) Rename the .env.example file to .env 
+6) Configure the database connection in the .env file
